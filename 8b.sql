@@ -7,12 +7,11 @@ FROM aka_name AS an,
      name AS n,
      role_type AS rt,
      title AS t
-
- WHERE an.person_id = n.id
-   AND n.id = ci.person_id
-   AND ci.movie_id = t.id
-   AND t.id = mc.movie_id
-   AND mc.company_id = cn.id
-   AND ci.role_id = rt.id
-   AND an.person_id = ci.person_id
-   AND ci.movie_id = mc.movie_id;
+WHERE ci.movie_id = mc.movie_id
+  AND an.person_id = n.id
+  AND n.id = ci.person_id
+  AND ci.movie_id = t.id
+  AND t.id = mc.movie_id
+  AND mc.company_id = cn.id
+  AND ci.role_id = rt.id
+  AND an.person_id = ci.person_id;

@@ -8,13 +8,12 @@ FROM cast_info AS ci,
      movie_info_idx AS mi_idx,
      name AS n,
      title AS t
-
- WHERE t.id = mi.movie_id
-   AND t.id = mi_idx.movie_id
-   AND t.id = ci.movie_id
-   AND ci.movie_id = mi.movie_id
-   AND ci.movie_id = mi_idx.movie_id
-   AND mi.movie_id = mi_idx.movie_id
-   AND n.id = ci.person_id
-   AND it1.id = mi.info_type_id
-   AND it2.id = mi_idx.info_type_id;
+WHERE it2.id = mi_idx.info_type_id
+  AND t.id = mi.movie_id
+  AND t.id = mi_idx.movie_id
+  AND t.id = ci.movie_id
+  AND ci.movie_id = mi.movie_id
+  AND ci.movie_id = mi_idx.movie_id
+  AND mi.movie_id = mi_idx.movie_id
+  AND n.id = ci.person_id
+  AND it1.id = mi.info_type_id;
