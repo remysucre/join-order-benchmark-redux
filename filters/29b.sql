@@ -1,0 +1,11 @@
+SELECT (*) FROM comp_cast_type AS cct2 WHERE cct2.kind = 'complete+verified';
+SELECT (*) FROM char_name AS chn WHERE chn.name = 'Queen';
+SELECT (*) FROM info_type AS it3 WHERE it3.info = 'height';
+SELECT (*) FROM name AS n WHERE n.gender = 'f' AND n.name LIKE '%An%';
+SELECT (*) FROM role_type AS rt WHERE rt.role = 'actress';
+SELECT (*) FROM title AS t WHERE t.title = 'Shrek 2';
+SELECT (*) FROM keyword AS k WHERE k.keyword = 'computer-animation';
+SELECT (*) FROM movie_info AS mi WHERE mi.info LIKE 'USA:%200%';
+SELECT (*) FROM comp_cast_type AS cct1 WHERE cct1.kind = 'cast';
+SELECT (*) FROM company_name AS cn WHERE cn.country_code = '[us]';
+SELECT (*) FROM info_type AS it WHERE it.info = 'release dates';

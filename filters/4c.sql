@@ -1,0 +1,4 @@
+SELECT (*) FROM info_type AS it WHERE it.info = 'rating';
+SELECT (*) FROM movie_info_idx AS mi_idx WHERE mi_idx.info > '2.0';
+SELECT (*) FROM title AS t WHERE t.production_year > 1990;
+SELECT (*) FROM keyword AS k WHERE k.keyword LIKE '%sequel%';
