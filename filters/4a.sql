@@ -1,4 +1,4 @@
-COPY (SELECT * FROM keyword AS k WHERE k.keyword LIKE '%sequel%') TO '../data/4a/keyword.csv' (HEADER, DELIMITER ',');
-COPY (SELECT * FROM title AS t WHERE t.production_year > 2005) TO '../data/4a/title.csv' (HEADER, DELIMITER ',');
-COPY (SELECT * FROM movie_info_idx AS mi_idx WHERE mi_idx.info > '5.0') TO '../data/4a/movie_info_idx.csv' (HEADER, DELIMITER ',');
-COPY (SELECT * FROM info_type AS it WHERE it.info = 'rating') TO '../data/4a/info_type.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM info_type AS it WHERE it.info = 'rating') TO '../data/4a/info_type.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM keyword AS k WHERE k.keyword LIKE '%sequel%') TO '../data/4a/keyword.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM movie_info_idx AS mi_idx WHERE mi_idx.info > '5.0') TO '../data/4a/movie_info_idx.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM title AS t WHERE t.production_year > 2005) TO '../data/4a/title.csv' (HEADER, DELIMITER ',', ESCAPE '\');

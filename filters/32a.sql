@@ -1,1 +1,1 @@
-COPY (SELECT * FROM keyword AS k WHERE k.keyword = '10,000-mile-club') TO '../data/32a/keyword.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM keyword AS k WHERE k.keyword = '10,000-mile-club') TO '../data/32a/keyword.csv' (HEADER, DELIMITER ',', ESCAPE '\');
