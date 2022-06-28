@@ -1,5 +1,5 @@
-SELECT (*) FROM info_type AS it2 WHERE it2.info = 'rating';
-SELECT (*) FROM company_type AS ct WHERE ct.kind = 'production companies';
-SELECT (*) FROM company_name AS cn WHERE cn.country_code = '[us]';
-SELECT (*) FROM info_type AS it1 WHERE it1.info = 'genres';
-SELECT (*) FROM movie_info_idx AS mi_idx WHERE mi_idx.info > '8.0';
+COPY (SELECT * FROM company_type AS ct WHERE ct.kind = 'production companies') TO '../data/12a/company_type.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM info_type AS it2 WHERE it2.info = 'rating') TO '../data/12a/info_type.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM movie_info_idx AS mi_idx WHERE mi_idx.info > '8.0') TO '../data/12a/movie_info_idx.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM info_type AS it1 WHERE it1.info = 'genres') TO '../data/12a/info_type.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM company_name AS cn WHERE cn.country_code = '[us]') TO '../data/12a/company_name.csv' (HEADER, DELIMITER ',');

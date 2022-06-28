@@ -1,4 +1,4 @@
-SELECT (*) FROM info_type AS it1 WHERE it1.info = 'release dates';
-SELECT (*) FROM company_name AS cn WHERE cn.country_code = '[us]';
-SELECT (*) FROM movie_info AS mi WHERE mi.note LIKE '%internet%' AND (mi.info LIKE 'USA:% 199%' OR mi.info LIKE 'USA:% 200%');
-SELECT (*) FROM title AS t WHERE t.production_year > 1990;
+COPY (SELECT * FROM company_name AS cn WHERE cn.country_code = '[us]') TO '../data/15c/company_name.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM info_type AS it1 WHERE it1.info = 'release dates') TO '../data/15c/info_type.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM title AS t WHERE t.production_year > 1990) TO '../data/15c/title.csv' (HEADER, DELIMITER ',');
+COPY (SELECT * FROM movie_info AS mi WHERE mi.note LIKE '%internet%' AND (mi.info LIKE 'USA:% 199%' OR mi.info LIKE 'USA:% 200%')) TO '../data/15c/movie_info.csv' (HEADER, DELIMITER ',');
