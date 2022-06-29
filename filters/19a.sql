@@ -1,6 +1,8 @@
-COPY (SELECT * FROM company_name AS cn WHERE cn.country_code = '[us]') TO '../data/19a/company_name.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM info_type AS it WHERE it.info = 'release dates') TO '../data/19a/info_type.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM movie_companies AS mc WHERE (mc.note LIKE '%(USA)%' OR mc.note LIKE '%(worldwide)%')) TO '../data/19a/movie_companies.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM movie_info AS mi WHERE (mi.info LIKE 'Japan:%200%' OR mi.info LIKE 'USA:%200%')) TO '../data/19a/movie_info.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM name AS n WHERE n.gender = 'f' AND n.name LIKE '%Ang%') TO '../data/19a/name.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM role_type AS rt WHERE rt.role = 'actress') TO '../data/19a/role_type.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM company_name AS cn WHERE cn.country_code = '[us]') TO '../data/19a/cn.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM movie_companies AS mc WHERE mc.note IS NOT NULL AND (mc.note LIKE '%(USA)%' OR mc.note LIKE '%(worldwide)%')) TO '../data/19a/mc.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM info_type AS it WHERE it.info = 'release dates') TO '../data/19a/it.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM title AS t WHERE t.production_year BETWEEN 2005 AND 2009) TO '../data/19a/t.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM cast_info AS ci WHERE ci.note IN ('(voice)', '(voice: Japanese version)', '(voice) (uncredited)', '(voice: English version)')) TO '../data/19a/ci.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM name AS n WHERE n.gender = 'f' AND n.name LIKE '%Ang%') TO '../data/19a/n.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM movie_info AS mi WHERE mi.info IS NOT NULL AND (mi.info LIKE 'Japan:%200%' OR mi.info LIKE 'USA:%200%')) TO '../data/19a/mi.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM role_type AS rt WHERE rt.role = 'actress') TO '../data/19a/rt.csv' (HEADER, DELIMITER ',', ESCAPE '\');

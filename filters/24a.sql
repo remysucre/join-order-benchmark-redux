@@ -1,6 +1,8 @@
-COPY (SELECT * FROM info_type AS it WHERE it.info = 'release dates') TO '../data/24a/info_type.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM company_name AS cn WHERE cn.country_code = '[us]') TO '../data/24a/company_name.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM name AS n WHERE n.gender = 'f' AND n.name LIKE '%An%') TO '../data/24a/name.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM title AS t WHERE t.production_year > 2010) TO '../data/24a/title.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM role_type AS rt WHERE rt.role = 'actress') TO '../data/24a/role_type.csv' (HEADER, DELIMITER ',', ESCAPE '\');
-COPY (SELECT * FROM movie_info AS mi WHERE (mi.info LIKE 'Japan:%201%' OR mi.info LIKE 'USA:%201%')) TO '../data/24a/movie_info.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM company_name AS cn WHERE cn.country_code = '[us]') TO '../data/24a/cn.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM keyword AS k WHERE k.keyword IN ('hero', 'martial-arts', 'hand-to-hand-combat')) TO '../data/24a/k.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM movie_info AS mi WHERE mi.info IS NOT NULL AND (mi.info LIKE 'Japan:%201%' OR mi.info LIKE 'USA:%201%')) TO '../data/24a/mi.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM name AS n WHERE n.gender = 'f' AND n.name LIKE '%An%') TO '../data/24a/n.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM role_type AS rt WHERE rt.role = 'actress') TO '../data/24a/rt.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM title AS t WHERE t.production_year > 2010) TO '../data/24a/t.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM cast_info AS ci WHERE ci.note IN ('(voice)', '(voice: Japanese version)', '(voice) (uncredited)', '(voice: English version)')) TO '../data/24a/ci.csv' (HEADER, DELIMITER ',', ESCAPE '\');
+COPY (SELECT * FROM info_type AS it WHERE it.info = 'release dates') TO '../data/24a/it.csv' (HEADER, DELIMITER ',', ESCAPE '\');
