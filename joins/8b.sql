@@ -1,5 +1,5 @@
 SELECT MIN(an.name) AS acress_pseudonym, MIN(t.title) AS japanese_anime_movie
- FROM aka_name AS an, ci, cn, rt, n, t, mc, 
+ FROM mc, aka_name AS an, rt, cn, ci, n, t, 
 WHERE an.person_id = n.id
 AND n.id = ci.person_id
 AND ci.movie_id = t.id

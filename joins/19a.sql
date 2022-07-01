@@ -1,5 +1,5 @@
 SELECT MIN(n.name) AS voicing_actress, MIN(t.title) AS voiced_movie
- FROM mi, cn, char_name AS chn, aka_name AS an, it, rt, ci, mc, n, t, 
+ FROM n, rt, t, mc, char_name AS chn, ci, cn, aka_name AS an, mi, it, 
 WHERE t.id = mi.movie_id
 AND t.id = mc.movie_id
 AND t.id = ci.movie_id

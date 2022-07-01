@@ -1,5 +1,5 @@
 SELECT MIN(mi.info) AS movie_budget, MIN(mi_idx.info) AS movie_votes, MIN(n.name) AS writer, MIN(t.title) AS complete_violent_movie
- FROM mi, complete_cast AS cc, ci, it1, it2, k, movie_keyword AS mk, n, cct1, movie_info_idx AS mi_idx, cct2, t, 
+ FROM cct1, t, complete_cast AS cc, movie_info_idx AS mi_idx, cct2, mi, it2, it1, ci, k, movie_keyword AS mk, n, 
 WHERE t.id = mi.movie_id
 AND t.id = mi_idx.movie_id
 AND t.id = ci.movie_id

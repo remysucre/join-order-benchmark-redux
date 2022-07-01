@@ -1,5 +1,5 @@
 SELECT MIN(t.title) AS american_vhs_movie
- FROM mc, info_type AS it, t, ct, mi, 
+ FROM ct, info_type AS it, mi, mc, t, 
 WHERE t.id = mi.movie_id
 AND t.id = mc.movie_id
 AND mc.movie_id = mi.movie_id

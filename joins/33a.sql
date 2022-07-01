@@ -1,5 +1,5 @@
 SELECT MIN(cn1.name) AS first_company, MIN(cn2.name) AS second_company, MIN(mi_idx1.info) AS first_rating, MIN(mi_idx2.info) AS second_rating, MIN(t1.title) AS first_movie, MIN(t2.title) AS second_movie
- FROM company_name AS cn2, it2, movie_companies AS mc1, mi_idx2, kt2, movie_link AS ml, lt, cn1, kt1, movie_info_idx AS mi_idx1, t2, movie_companies AS mc2, it1, title AS t1, 
+ FROM mi_idx2, t2, movie_companies AS mc1, kt2, lt, cn1, it1, movie_companies AS mc2, kt1, movie_info_idx AS mi_idx1, movie_link AS ml, company_name AS cn2, title AS t1, it2, 
 WHERE lt.id = ml.link_type_id
 AND t1.id = ml.movie_id
 AND t2.id = ml.linked_movie_id

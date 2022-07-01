@@ -1,5 +1,5 @@
 SELECT MIN(mi.info) AS release_date, MIN(miidx.info) AS rating, MIN(t.title) AS german_movie
- FROM title AS t, ct, it2, movie_info AS mi, kt, cn, it, movie_info_idx AS miidx, movie_companies AS mc, 
+ FROM cn, movie_info AS mi, movie_info_idx AS miidx, ct, title AS t, it2, kt, movie_companies AS mc, it, 
 WHERE mi.movie_id = t.id
 AND it2.id = mi.info_type_id
 AND kt.id = t.kind_id

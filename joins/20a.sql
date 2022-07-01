@@ -1,5 +1,5 @@
 SELECT MIN(t.title) AS complete_downey_ironman_movie
- FROM cct2, complete_cast AS cc, k, cct1, chn, kt, name AS n, t, movie_keyword AS mk, cast_info AS ci, 
+ FROM k, kt, movie_keyword AS mk, name AS n, cct1, cct2, chn, complete_cast AS cc, t, cast_info AS ci, 
 WHERE kt.id = t.kind_id
 AND t.id = mk.movie_id
 AND t.id = ci.movie_id

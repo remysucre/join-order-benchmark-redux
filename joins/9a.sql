@@ -1,5 +1,5 @@
 SELECT MIN(an.name) AS alternative_name, MIN(chn.name) AS character_name, MIN(t.title) AS movie
- FROM t, cn, aka_name AS an, char_name AS chn, mc, ci, n, rt, 
+ FROM aka_name AS an, mc, char_name AS chn, cn, n, ci, t, rt, 
 WHERE ci.movie_id = t.id
 AND t.id = mc.movie_id
 AND ci.movie_id = mc.movie_id

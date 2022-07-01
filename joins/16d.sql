@@ -1,5 +1,5 @@
 SELECT MIN(an.name) AS cool_actor_pseudonym, MIN(t.title) AS series_named_after_char
- FROM aka_name AS an, cast_info AS ci, movie_companies AS mc, movie_keyword AS mk, cn, t, k, name AS n, 
+ FROM cn, aka_name AS an, movie_companies AS mc, k, name AS n, cast_info AS ci, movie_keyword AS mk, t, 
 WHERE an.person_id = n.id
 AND n.id = ci.person_id
 AND ci.movie_id = t.id

@@ -1,5 +1,5 @@
 SELECT MIN(chn.name) AS uncredited_voiced_character, MIN(t.title) AS russian_movie
- FROM rt, ci, company_type AS ct, t, movie_companies AS mc, char_name AS chn, cn, 
+ FROM company_type AS ct, char_name AS chn, rt, ci, t, cn, movie_companies AS mc, 
 WHERE t.id = mc.movie_id
 AND t.id = ci.movie_id
 AND ci.movie_id = mc.movie_id

@@ -1,5 +1,5 @@
 SELECT MIN(cn.name) AS movie_company, MIN(mi_idx.info) AS rating, MIN(t.title) AS western_violent_movie
- FROM cn, mi_idx, k, mi, mc, movie_keyword AS mk, it2, t, it1, company_type AS ct, kt, 
+ FROM cn, mi, it1, mi_idx, company_type AS ct, it2, kt, mc, t, movie_keyword AS mk, k, 
 WHERE kt.id = t.kind_id
 AND t.id = mi.movie_id
 AND t.id = mk.movie_id

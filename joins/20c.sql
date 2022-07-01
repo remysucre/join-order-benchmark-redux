@@ -1,5 +1,5 @@
 SELECT MIN(n.name) AS cast_member, MIN(t.title) AS complete_dynamic_hero_movie
- FROM cast_info AS ci, name AS n, movie_keyword AS mk, kt, t, cct1, complete_cast AS cc, cct2, k, chn, 
+ FROM cct1, name AS n, cct2, k, cast_info AS ci, chn, kt, movie_keyword AS mk, t, complete_cast AS cc, 
 WHERE kt.id = t.kind_id
 AND t.id = mk.movie_id
 AND t.id = ci.movie_id

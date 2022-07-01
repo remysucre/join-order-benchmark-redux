@@ -1,5 +1,5 @@
 SELECT MIN(chn.name) AS voiced_char, MIN(n.name) AS voicing_actress, MIN(t.title) AS voiced_animation
- FROM n, rt, mi, ci, cn, complete_cast AS cc, cct1, t, person_info AS pi, k, char_name AS chn, aka_name AS an, it, it3, movie_keyword AS mk, movie_companies AS mc, cct2, 
+ FROM person_info AS pi, n, ci, k, it3, char_name AS chn, it, mi, rt, cn, t, movie_keyword AS mk, cct1, movie_companies AS mc, cct2, aka_name AS an, complete_cast AS cc, 
 WHERE t.id = mi.movie_id
 AND t.id = mc.movie_id
 AND t.id = ci.movie_id

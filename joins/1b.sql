@@ -1,5 +1,5 @@
 SELECT MIN(mc.note) AS production_note, MIN(t.title) AS movie_title, MIN(t.production_year) AS movie_year
- FROM ct, movie_info_idx AS mi_idx, t, it, mc, 
+ FROM ct, it, mc, movie_info_idx AS mi_idx, t, 
 WHERE ct.id = mc.company_type_id
 AND t.id = mc.movie_id
 AND t.id = mi_idx.movie_id

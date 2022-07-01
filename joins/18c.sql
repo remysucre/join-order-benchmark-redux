@@ -1,5 +1,5 @@
 SELECT MIN(mi.info) AS movie_budget, MIN(mi_idx.info) AS movie_votes, MIN(t.title) AS movie_title
- FROM ci, it2, mi, n, title AS t, movie_info_idx AS mi_idx, it1, 
+ FROM movie_info_idx AS mi_idx, mi, n, it2, ci, title AS t, it1, 
 WHERE t.id = mi.movie_id
 AND t.id = mi_idx.movie_id
 AND t.id = ci.movie_id

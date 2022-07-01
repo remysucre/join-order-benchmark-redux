@@ -1,5 +1,5 @@
 SELECT MIN(n.name) AS of_person, MIN(t.title) AS biography_movie
- FROM an, it, n, pi, movie_link AS ml, lt, t, cast_info AS ci, 
+ FROM it, t, movie_link AS ml, lt, n, pi, cast_info AS ci, an, 
 WHERE n.id = an.person_id
 AND n.id = pi.person_id
 AND ci.person_id = n.id

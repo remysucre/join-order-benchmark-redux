@@ -1,5 +1,5 @@
 SELECT MIN(n.name) AS member_in_charnamed_movie
- FROM title AS t, cast_info AS ci, movie_companies AS mc, movie_keyword AS mk, company_name AS cn, k, n, 
+ FROM company_name AS cn, cast_info AS ci, n, title AS t, movie_keyword AS mk, k, movie_companies AS mc, 
 WHERE n.id = ci.person_id
 AND ci.movie_id = t.id
 AND t.id = mk.movie_id

@@ -1,5 +1,5 @@
 SELECT MIN(mi.info) AS movie_budget, MIN(mi_idx.info) AS movie_votes, MIN(n.name) AS writer, MIN(t.title) AS violent_liongate_movie
- FROM cn, movie_keyword AS mk, k, mi, title AS t, name AS n, it2, movie_info_idx AS mi_idx, ci, it1, movie_companies AS mc, 
+ FROM name AS n, title AS t, mi, movie_info_idx AS mi_idx, movie_companies AS mc, k, cn, it1, movie_keyword AS mk, it2, ci, 
 WHERE t.id = mi.movie_id
 AND t.id = mi_idx.movie_id
 AND t.id = ci.movie_id

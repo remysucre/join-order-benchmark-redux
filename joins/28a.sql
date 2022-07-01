@@ -1,5 +1,5 @@
 SELECT MIN(cn.name) AS movie_company, MIN(mi_idx.info) AS rating, MIN(t.title) AS complete_euro_dark_movie
- FROM t, cct2, it2, cn, it1, k, kt, mc, cct1, company_type AS ct, mi, mi_idx, movie_keyword AS mk, complete_cast AS cc, 
+ FROM it1, mi_idx, it2, cn, cct2, movie_keyword AS mk, company_type AS ct, k, kt, t, complete_cast AS cc, mc, cct1, mi, 
 WHERE kt.id = t.kind_id
 AND t.id = mi.movie_id
 AND t.id = mk.movie_id

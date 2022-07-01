@@ -1,5 +1,5 @@
 SELECT MIN(n.name) AS voicing_actress, MIN(t.title) AS jap_engl_voiced_movie
- FROM t, n, movie_companies AS mc, movie_info AS mi, ci, char_name AS chn, rt, it, cn, aka_name AS an, 
+ FROM ci, cn, aka_name AS an, t, movie_companies AS mc, char_name AS chn, it, movie_info AS mi, rt, n, 
 WHERE t.id = mi.movie_id
 AND t.id = mc.movie_id
 AND t.id = ci.movie_id

@@ -1,5 +1,5 @@
 SELECT MIN(cn.name) AS from_company, MIN(mc.note) AS production_note, MIN(t.title) AS movie_based_on_book
- FROM ct, t, k, mc, movie_link AS ml, link_type AS lt, movie_keyword AS mk, cn, 
+ FROM cn, mc, link_type AS lt, movie_keyword AS mk, k, ct, t, movie_link AS ml, 
 WHERE lt.id = ml.link_type_id
 AND ml.movie_id = t.id
 AND t.id = mk.movie_id

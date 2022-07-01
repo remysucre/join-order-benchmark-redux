@@ -1,5 +1,5 @@
 SELECT MIN(chn.name) AS character_name, MIN(mi_idx.info) AS rating, MIN(n.name) AS playing_actor, MIN(t.title) AS complete_hero_movie
- FROM mi_idx, name AS n, it2, movie_keyword AS mk, complete_cast AS cc, k, cct2, t, cct1, kt, chn, cast_info AS ci, 
+ FROM kt, complete_cast AS cc, it2, cct2, cct1, chn, cast_info AS ci, name AS n, mi_idx, t, k, movie_keyword AS mk, 
 WHERE kt.id = t.kind_id
 AND t.id = mk.movie_id
 AND t.id = ci.movie_id

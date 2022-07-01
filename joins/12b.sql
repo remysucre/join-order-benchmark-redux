@@ -1,5 +1,5 @@
 SELECT MIN(mi.info) AS budget, MIN(t.title) AS unsuccsessful_movie
- FROM cn, it1, movie_companies AS mc, ct, movie_info_idx AS mi_idx, it2, movie_info AS mi, t, 
+ FROM it1, it2, ct, movie_info_idx AS mi_idx, t, cn, movie_companies AS mc, movie_info AS mi, 
 WHERE t.id = mi.movie_id
 AND t.id = mi_idx.movie_id
 AND mi.info_type_id = it1.id

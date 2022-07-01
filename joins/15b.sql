@@ -1,5 +1,5 @@
 SELECT MIN(mi.info) AS release_date, MIN(t.title) AS youtube_movie
- FROM keyword AS k, mc, mi, aka_title AS at, t, it1, company_type AS ct, movie_keyword AS mk, cn, 
+ FROM aka_title AS at, mc, it1, mi, movie_keyword AS mk, t, cn, keyword AS k, company_type AS ct, 
 WHERE t.id = at.movie_id
 AND t.id = mi.movie_id
 AND t.id = mk.movie_id

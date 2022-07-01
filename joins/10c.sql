@@ -1,5 +1,5 @@
 SELECT MIN(chn.name) AS character, MIN(t.title) AS movie_with_american_producer
- FROM char_name AS chn, ci, role_type AS rt, movie_companies AS mc, cn, company_type AS ct, t, 
+ FROM cn, company_type AS ct, movie_companies AS mc, t, role_type AS rt, char_name AS chn, ci, 
 WHERE t.id = mc.movie_id
 AND t.id = ci.movie_id
 AND ci.movie_id = mc.movie_id

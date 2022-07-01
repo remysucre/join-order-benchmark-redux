@@ -1,5 +1,5 @@
 SELECT MIN(cn.name) AS producing_company, MIN(lt.link) AS link_type, MIN(t.title) AS complete_western_sequel
- FROM movie_link AS ml, t, lt, mi, complete_cast AS cc, ct, k, movie_keyword AS mk, cct2, cct1, cn, mc, 
+ FROM k, movie_link AS ml, t, lt, mi, movie_keyword AS mk, cn, cct1, cct2, ct, mc, complete_cast AS cc, 
 WHERE lt.id = ml.link_type_id
 AND ml.movie_id = t.id
 AND t.id = mk.movie_id

@@ -1,5 +1,5 @@
 SELECT MIN(t.title) AS movie_title
- FROM k, movie_keyword AS mk, t, mi, 
+ FROM movie_keyword AS mk, mi, k, t, 
 WHERE t.id = mi.movie_id
 AND t.id = mk.movie_id
 AND mk.movie_id = mi.movie_id

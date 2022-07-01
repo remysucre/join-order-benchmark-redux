@@ -1,5 +1,5 @@
 SELECT MIN(chn.name) AS voiced_char_name, MIN(n.name) AS voicing_actress_name, MIN(t.title) AS kung_fu_panda
- FROM k, movie_companies AS mc, ci, aka_name AS an, mi, it, n, movie_keyword AS mk, rt, char_name AS chn, t, cn, 
+ FROM n, char_name AS chn, k, aka_name AS an, rt, cn, ci, t, movie_keyword AS mk, it, mi, movie_companies AS mc, 
 WHERE t.id = mi.movie_id
 AND t.id = mc.movie_id
 AND t.id = ci.movie_id

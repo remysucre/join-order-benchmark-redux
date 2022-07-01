@@ -1,5 +1,5 @@
 SELECT MIN(cn.name) AS producing_company, MIN(miidx.info) AS rating, MIN(t.title) AS movie_about_winning
- FROM movie_companies AS mc, movie_info_idx AS miidx, ct, it2, cn, kt, movie_info AS mi, it, t, 
+ FROM movie_info_idx AS miidx, movie_companies AS mc, cn, ct, t, it2, it, movie_info AS mi, kt, 
 WHERE mi.movie_id = t.id
 AND it2.id = mi.info_type_id
 AND kt.id = t.kind_id

@@ -1,5 +1,5 @@
 SELECT MIN(mi_idx.info) AS rating, MIN(t.title) AS northern_dark_movie
- FROM mi_idx, kt, t, it1, k, movie_keyword AS mk, it2, mi, 
+ FROM it2, movie_keyword AS mk, k, kt, mi_idx, it1, t, mi, 
 WHERE kt.id = t.kind_id
 AND t.id = mi.movie_id
 AND t.id = mk.movie_id

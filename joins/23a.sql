@@ -1,5 +1,5 @@
 SELECT MIN(kt.kind) AS movie_kind, MIN(t.title) AS complete_us_internet_movie
- FROM it1, company_type AS ct, keyword AS k, movie_keyword AS mk, cct1, t, movie_companies AS mc, mi, cn, kt, complete_cast AS cc, 
+ FROM mi, complete_cast AS cc, keyword AS k, movie_keyword AS mk, movie_companies AS mc, cct1, company_type AS ct, it1, t, kt, cn, 
 WHERE kt.id = t.kind_id
 AND t.id = mi.movie_id
 AND t.id = mk.movie_id

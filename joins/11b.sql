@@ -1,5 +1,5 @@
 SELECT MIN(cn.name) AS from_company, MIN(lt.link) AS movie_link_type, MIN(t.title) AS sequel_movie
- FROM ct, movie_link AS ml, k, mc, lt, movie_keyword AS mk, t, cn, 
+ FROM movie_link AS ml, k, lt, cn, movie_keyword AS mk, t, mc, ct, 
 WHERE lt.id = ml.link_type_id
 AND ml.movie_id = t.id
 AND t.id = mk.movie_id
