@@ -1,5 +1,5 @@
-SELECT MIN(mi.info) AS release_date,
-       MIN(t.title) AS youtube_movie
+SELECT *
+
 FROM aka_title AS at,
      company_name AS cn,
      company_type AS ct,

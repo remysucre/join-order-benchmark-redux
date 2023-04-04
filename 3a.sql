@@ -1,4 +1,4 @@
-SELECT MIN(t.title) AS movie_title
+SELECT *
 FROM keyword AS k,
      movie_info AS mi,
      movie_keyword AS mk,

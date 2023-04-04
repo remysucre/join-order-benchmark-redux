@@ -1,5 +1,5 @@
-SELECT MIN(an1.name) AS actress_pseudonym,
-       MIN(t.title) AS japanese_movie_dubbed
+SELECT *
+
 FROM aka_name AS an1,
      cast_info AS ci,
      company_name AS cn,
